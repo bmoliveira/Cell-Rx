@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/ivanbruel/Cell-Rx.git", :tag => s.version }
   s.source_files  = "Pod/Classes/*.swift"
   s.frameworks  = "UIKit"
-  s.dependency "RxSwift", '~> 3.0.0'
+  s.dependency "RxSwift", '~> 3.1.0'
 end
