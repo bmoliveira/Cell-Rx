@@ -71,7 +71,6 @@
 		344736E2916FDF00C26730AA11DAD09E /* UIImagePickerController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFCC3D6D95569B964077E5E25C7EB87 /* UIImagePickerController+Rx.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		36A3655AAA62397F30A88E76DDBA7449 /* Sink.swift in Sources */ = {isa = PBXBuildFile; fileRef = A572FFD676AA1DA174BEC3E0F2A1C959 /* Sink.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		38639212A1201B6C2F888EE9BF892147 /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666776B49F5DDABA0BF40EE5B871527 /* ObservableType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		386D486D1D7A6B6200E33AE7 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D486C1D7A6B6200E33AE7 /* DispatchQueue+Extension.swift */; };
 		39DDA70AD63A8B71FFDA8CE2904039A1 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2F15BCF6A44A7F25D46AED055ABC8 /* Variable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3A8D1D33E772C8CFC2DE9901FD791374 /* CombineLatest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ED2679F24353AD6DD4A25C67A952F7 /* CombineLatest.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3C556B42B4062216D66DE3859A873256 /* UIControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47217E4B815858A8EF35399F1AAE11AA /* UIControl+Rx.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -395,7 +394,6 @@
 		368DACF126C18963FE09CA4905BC5A87 /* Repeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Repeat.swift; path = RxSwift/Observables/Implementations/Repeat.swift; sourceTree = "<group>"; };
 		3774FC25CB69AA3F7B659BF4B30CE0D7 /* ObserveOn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObserveOn.swift; path = RxSwift/Observables/Implementations/ObserveOn.swift; sourceTree = "<group>"; };
 		380EE5AE1A0092007DE463F8E79506F8 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		386D486C1D7A6B6200E33AE7 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
 		3A39F07CEA31D4679D53E4E8BD3D8EB0 /* RecursiveScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveScheduler.swift; path = RxSwift/Schedulers/RecursiveScheduler.swift; sourceTree = "<group>"; };
 		3D75C26EDE28D7CA1FC4F6AD7D61D71F /* Cell+Rx-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cell+Rx-prefix.pch"; sourceTree = "<group>"; };
 		3E0288C0118BC82BB385C61DFCAB0AEF /* RxTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTarget.swift; path = RxCocoa/Common/RxTarget.swift; sourceTree = "<group>"; };
@@ -685,7 +683,6 @@
 		296C3EA3E39E6797602F538A1626FF3A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				386D486C1D7A6B6200E33AE7 /* DispatchQueue+Extension.swift */,
 				146A250A27B803596250E3F97103386C /* DisposeBagReusable.swift */,
 				2E3CA6C8997C9C8751A802ADB6AE27B8 /* NSObject+Swizzle.swift */,
 				1F3F1B9386B8CC16D0B1FF2509E02383 /* UICollectionReusableView+Rx.swift */,
@@ -1410,7 +1407,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDE35E978E3A1171A441ED3F0B0515AB /* Cell+Rx-dummy.m in Sources */,
-				386D486D1D7A6B6200E33AE7 /* DispatchQueue+Extension.swift in Sources */,
 				DA1A3072EC97C74AE12147DDF1C6EE38 /* DisposeBagReusable.swift in Sources */,
 				10F13D3C36E17DC066586492C275572F /* NSObject+Swizzle.swift in Sources */,
 				328F26B061A7FD0D5196F8F13AE2AD08 /* UICollectionReusableView+Rx.swift in Sources */,

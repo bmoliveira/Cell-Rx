@@ -10,17 +10,12 @@ public extension UITableViewCell {
     }
     
     open override class func initialize() {
-        struct Static {
-            static var token: Int = 0
-        }
         // make sure this isn't a subclass
         if self !== UITableViewCell.self {
             return
         }
       
-        DispatchQueue.once(token: &Static.token) {
-            self.swizzleMethodForSelector(#selector(self.prepareForReuse),
-                withMethodForSelector: #selector(self.rx_prepareForReuse))
-        }
+        self.swizzleMethodForSelector(#selector(self.prepareForReuse),
+            withMethodForSelector: #selector(self.rx_prepareForReuse))
     }
 }
