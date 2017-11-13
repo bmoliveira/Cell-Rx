@@ -1,6 +1,6 @@
 {
   "name": "Cell+Rx",
-  "version": "1.2",
+  "version": "1.2.3",
   "summary": "Handy RxSwift extensions on UITableViewCell and UICollectionViewCell.",
   "description": "Right now, we just have a `rx_reusableDisposeBag` property, but we're open to PRs!",
   "homepage": "https://github.com/ivanbruel/Cell-Rx",
@@ -17,13 +17,13 @@
   },
   "source": {
     "git": "https://github.com/ivanbruel/Cell-Rx.git",
-    "tag": "1.2"
+    "tag": "1.2.3"
   },
   "source_files": "Pod/Classes/*.swift",
   "frameworks": "UIKit",
   "dependencies": {
     "RxSwift": [
-      "~> 3.0.0.alpha.1"
+      "~> 4.0"
     ]
   }
 }

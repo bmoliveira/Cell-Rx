@@ -1,23 +1,23 @@
 PODS:
-  - Cell+Rx (1.2):
-    - RxSwift (~> 3.0.0.alpha.1)
-  - RxCocoa (3.0.0.alpha.1):
-    - RxSwift (~> 3.0.0.alpha.1)
-  - RxSwift (3.0.0.alpha.1)
+  - Cell+Rx (1.2.3):
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
 
 DEPENDENCIES:
   - Cell+Rx (from `../`)
-  - RxCocoa (~> 3.0.0.alpha.1)
+  - RxCocoa (~> 4.0)
 
 EXTERNAL SOURCES:
   Cell+Rx:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  Cell+Rx: cebe167ad4e0e1f540f9b9ecc4e849e65decc311
-  RxCocoa: 37b3b167eaa14446a315493ef6a188b277942b15
-  RxSwift: 0bccfee1e979c1b72a5d1dffdf96119303b5d111
+  Cell+Rx: 3c11f30c335bf0d8f6c8b7919c0709124bd53169
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
 
-PODFILE CHECKSUM: 343122ff1264b66ae56151ee0ca452d3e792182b
+PODFILE CHECKSUM: bcb2a7abf318246895373331213d501425945349
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.3.1
