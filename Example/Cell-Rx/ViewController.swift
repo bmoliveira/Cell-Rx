@@ -27,11 +27,20 @@ class ViewController: UIViewController {
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
     viewModels
       .asObservable()
-      .debug()
-      .bindTo(tableView.rx.items(cellIdentifier: "UITableViewCell", cellType: UITableViewCell.self)) {
+      .bind(to: tableView.rx.items(cellIdentifier: "UITableViewCell", cellType: UITableViewCell.self)) {
         (row, element,cell) in
-        cell.textLabel?.text = element.string.value
-    }.addDisposableTo(disposeBag)    
+  
+        guard let textLabel = cell.textLabel else {
+          return
+        }
+        
+        element.string
+          .asObservable()
+          .debug()
+          .bind(to: textLabel.rx.text)
+          .disposed(by: cell.rx_reusableDisposeBag)
+  
+      }.disposed(by: disposeBag)
   }
 
   override func didReceiveMemoryWarning() {
