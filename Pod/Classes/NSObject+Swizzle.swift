@@ -20,8 +20,10 @@ extension NSObject {
             swizzeledClasses.append(self)
         }
       
-        let originalMethod = class_getInstanceMethod(self, originalSelector)
-        let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
+        guard let originalMethod = class_getInstanceMethod(self, originalSelector)
+            else { fatalError("Unrecognized selector \(originalSelector) on \(self)") }
+        guard let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
+            else { fatalError("Unrecognized selector \(swizzledSelector) on \(self)") }
         
         let didAddMethod = class_addMethod(self, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
         

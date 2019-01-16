@@ -2,20 +2,23 @@ import UIKit
 import RxSwift
 import ObjectiveC
 
-public extension UITableViewCell {
+extension UITableViewCell: SelfAware {
     
+    @objc
     func rx_prepareForReuse() {
         self.rx_prepareForReuse()
         rx_reusableDisposeBag = DisposeBag()
     }
     
-    open override class func initialize() {
+    public class func swizzle() {
         // make sure this isn't a subclass
-        if self !== UITableViewCell.self {
-            return
-        }
-      
+        guard self === UITableViewCell.self else { return }
+        
         self.swizzleMethodForSelector(#selector(self.prepareForReuse),
-            withMethodForSelector: #selector(self.rx_prepareForReuse))
+                                      withMethodForSelector: #selector(self.rx_prepareForReuse))
+    }
+    
+    public static func awake() {
+        UITableViewCell.swizzle()
     }
 }

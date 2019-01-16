@@ -10,19 +10,22 @@ import UIKit
 import ObjectiveC
 import RxSwift
 
-extension UITableViewHeaderFooterView {    
+extension UITableViewHeaderFooterView: SelfAware {
+    @objc
     func rx_prepareForReuse() {
         self.rx_prepareForReuse()
         rx_reusableDisposeBag = DisposeBag()
     }
     
-    open override class func initialize() {
+    public class func swizzle() {
         // make sure this isn't a subclass
-        if self !== UITableViewHeaderFooterView.self {
-            return
-        }
-      
+        guard self === UITableViewHeaderFooterView.self else { return }
+        
         self.swizzleMethodForSelector(#selector(self.prepareForReuse),
-            withMethodForSelector: #selector(self.rx_prepareForReuse))
+                                      withMethodForSelector: #selector(self.rx_prepareForReuse))
+    }
+    
+    public static func awake() {
+        UITableViewHeaderFooterView.swizzle()
     }
 }

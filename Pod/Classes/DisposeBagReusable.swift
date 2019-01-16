@@ -11,7 +11,7 @@ import RxSwift
 
 func lockWith(_ object: AnyObject, closure: (Void) -> Void) {
     objc_sync_enter(object); defer { objc_sync_exit(object) }
-    closure()
+    closure(())
 }
 
 private struct AssociatedKeys {
