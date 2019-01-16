@@ -21,7 +21,7 @@ It'll work just like a property: when the instance is deinit'd, the `DisposeBag`
 Installing
 ----------
 
-####CocoaPods
+#### CocoaPods
 
 This works with RxSwift version 4 and Swift 4.0
 
