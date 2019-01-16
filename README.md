@@ -1,8 +1,11 @@
 Cell+Rx
 ===========
 
-![Swift 4](https://img.shields.io/badge/Swift-4.0.x-orange.svg)
-![RxSwift 4](https://img.shields.io/badge/RxSwift-4.0.x-red.svg)
+[![Version](https://img.shields.io/cocoapods/v/Cell+Rx.svg?style=flat)](http://cocoapods.org/pods/Cell+Rx)
+![Swift 4](https://img.shields.io/badge/Swift-4.2-green.svg)
+![RxSwift 4.x](https://img.shields.io/badge/RxSwift-4.x-orange.svg)
+[![License](https://img.shields.io/cocoapods/l/Cell+Rx.svg?style=flat)](http://cocoapods.org/pods/MarkdownKit)
+[![Platform](https://img.shields.io/cocoapods/p/Cell+Rx.svg?style=flat)](http://cocoapods.org/pods/MarkdownKit)
 
 **Cell+Rx** provides a similar API to [NSObject+Rx](https://github.com/RxSwiftCommunity/NSObject-Rx) but for cells who are reused along the way.
 
