@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "Cell+Rx"
-  s.version      = "1.3"
+  s.version      = "1.4"
   s.summary      = "Handy RxSwift extensions on UITableViewCell and UICollectionViewCell."
   s.description  = <<-DESC
-    Right now, we just have a `rx_reusableDisposeBag` property, but we're open to PRs!
+    Right now, we just have a `rx.reusableDisposeBag` property, but we're open to PRs!
                     DESC
   s.homepage     = "https://github.com/bmoliveira/Cell-Rx"
   s.license      = { :type => "MIT", :file => "LICENSE" }
