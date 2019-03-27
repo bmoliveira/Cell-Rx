@@ -22,6 +22,12 @@ public protocol DisposeBagReusable: class {
     var rx_reusableDisposeBag: DisposeBag {get set}
 }
 
+extension Reactive where Base : DisposeBagReusable {
+  public var disposeBagReusable: DisposeBag {
+    return self.base.rx_reusableDisposeBag
+  }
+}
+
 extension DisposeBagReusable  {
     public var rx_reusableDisposeBag: DisposeBag {
         get {
