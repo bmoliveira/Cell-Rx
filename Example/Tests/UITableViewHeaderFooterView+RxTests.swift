@@ -17,15 +17,15 @@ class UITableViewHeaderFooterView_RxTests: XCTestCase {
     func test_that_it_has_dispose_bag_by_default() {
         let view = UITableViewHeaderFooterView(frame: CGRect.zero)
         
-        XCTAssertNotNil(view.rx_reusableDisposeBag)
+      XCTAssertNotNil(view.rx.reusableDisposeBag)
     }
     
-    func test_that_it_returns_set_dispose_baag() {
+    func test_that_it_returns_set_dispose_bag() {
         let view = UITableViewHeaderFooterView(frame: CGRect.zero)
         let disposeBag = DisposeBag()
         view.rx_reusableDisposeBag = disposeBag
         
-        XCTAssertTrue(view.rx_reusableDisposeBag === disposeBag)
+      XCTAssertTrue(view.rx.reusableDisposeBag === disposeBag)
     }
     
     func test_that_it_changes_dispose_bag_on_reuse() {
@@ -34,6 +34,6 @@ class UITableViewHeaderFooterView_RxTests: XCTestCase {
         view.rx_reusableDisposeBag = disposeBag
         view.prepareForReuse()
         
-        XCTAssertTrue(view.rx_reusableDisposeBag !== disposeBag)
+      XCTAssertTrue(view.rx.reusableDisposeBag !== disposeBag)
     }
 }
