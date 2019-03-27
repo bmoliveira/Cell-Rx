@@ -2,7 +2,7 @@ Cell+Rx
 ===========
 
 [![Version](https://img.shields.io/cocoapods/v/Cell+Rx.svg?style=flat)](http://cocoapods.org/pods/Cell+Rx)
-![Swift 4](https://img.shields.io/badge/Swift-4.2-green.svg)
+![Swift 5](https://img.shields.io/badge/Swift-5.0-green.svg)
 ![RxSwift 4.x](https://img.shields.io/badge/RxSwift-4.x-orange.svg)
 [![License](https://img.shields.io/cocoapods/l/Cell+Rx.svg?style=flat)](http://cocoapods.org/pods/MarkdownKit)
 [![Platform](https://img.shields.io/cocoapods/p/Cell+Rx.svg?style=flat)](http://cocoapods.org/pods/MarkdownKit)
@@ -16,7 +16,7 @@ Instead of adding a new property to every cell, use this library to add it for y
 ```swift
 thing
   .bindTo(otherThing)
-  .disposed(by: rx_reusableDisposeBag)
+  .disposed(by: rx.reusableDisposeBag)
 ```
 
 It'll work just like a property: when the instance is deinit'd, the `DisposeBag` gets disposed. It will also reset whenever the cell is reused by detecting `prepareForReuse()` calls. It's also a read/write property, so you can use your own, too.
