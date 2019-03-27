@@ -23,13 +23,14 @@ public protocol DisposeBagReusable: class {
 }
 
 extension Reactive where Base : DisposeBagReusable {
-  public var disposeBagReusable: DisposeBag {
+  public var reusableDisposeBag: DisposeBag {
     return self.base.rx_reusableDisposeBag
   }
 }
 
 extension DisposeBagReusable  {
     public var rx_reusableDisposeBag: DisposeBag {
+      @available(swift, deprecated: 4.0, obsoleted: 5.0, renamed: "rx.reusableDisposeBag", message: "This will be removed in v5.0; please migrate to a different API.")
         get {
             var reusableDisposeBag: DisposeBag!
             lockWith(self) {
