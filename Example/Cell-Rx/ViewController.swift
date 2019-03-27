@@ -38,7 +38,7 @@ class ViewController: UIViewController {
           .asObservable()
           .debug()
           .bind(to: textLabel.rx.text)
-          .disposed(by: cell.rx_reusableDisposeBag)
+          .disposed(by: cell.rx.reusableDisposeBag)
   
       }.disposed(by: disposeBag)
   }
@@ -47,6 +47,4 @@ class ViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
 }
-
